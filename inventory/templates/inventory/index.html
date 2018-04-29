@@ -1,0 +1,36 @@
+{% extends 'inventory/base.html' %}
+
+{% block content %}
+  <div class="container">
+
+    <div class="search">
+      <div class="center_div">
+        <form class="form-group">
+            <input type="email" class="form-control" placeholder="Search for item">
+            <button type="submit" class="btn btn-success">Search</button>
+        </form>
+      </div>
+      </div>
+
+      <table class="table">
+      <tr class="title">
+          <td>Product Name</td>
+          <td>Brand</td>
+          <td>Price</td>
+          <td>Item left</td>
+          <td>Actions</td>
+      </tr>
+      {% for item in items %}
+      <tr>
+          <td><i class="fa fa-caret-right" aria-hidden="true"></i> {{item.products_name}}</td>
+          <td>{{item.brand}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.item_left}}</td>
+          <td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a><a href=""><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+      </tr>
+      {% endfor %}
+
+      </table>
+
+  </div>
+{% endblock %}

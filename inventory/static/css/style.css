@@ -1,0 +1,47 @@
+body{
+  background: #e0e0e0;
+  color: #212121;
+}
+
+.search{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.center_div{
+    margin: 0 auto;
+    width:70% /* value of your choice which suits your alignment */
+}
+
+.table{
+  margin: 0 auto;
+  width: 70%;
+}
+
+.table .fa-caret-right{
+  margin-right: 10px;
+}
+
+.table .fa-pencil,
+.table .fa-trash{
+  margin-right: 20px;
+}
+
+.table .fa-pencil{
+  color: #00897b;
+}
+
+.table .fa-trash{
+  color: #880e4f;
+}
+
+.table .title{
+  font-weight: 800;
+  font-size: 13px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.table th, .table td{
+  padding: 20px 0;
+}
