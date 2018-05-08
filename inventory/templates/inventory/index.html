@@ -36,6 +36,7 @@
                         <table>
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Product Name</th>
                                 <th>Brand</th>
                                 <th>Item Price</th>
@@ -47,11 +48,12 @@
                         <tbody>
                             {% for item in items %}
                             <tr>
+                            <td><img class="product-icon circle responsive-img" src="{{item.thumb.url}}" alt=""></td>
                             <td>{{item.products_name}}</td>
                             <td>{{item.brand}}</td>
                             <td>{{item.price}}</td>
                             <td>{{item.item_left}}</td>
-                            <td><a href="#"><i class="material-icons prefix edit">create</i></a> <a href="#"><i class="material-icons prefix delete">delete</i></a></td>
+                            <td><a href="{% url 'detail' slug=item.slug %}"><i class="material-icons prefix edit">create</i></a> <a href="#"><i class="material-icons prefix delete">delete</i></a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

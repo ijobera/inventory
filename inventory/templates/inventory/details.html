@@ -1,0 +1,13 @@
+{% extends 'inventory/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col l4">
+                    <img src="{{product.thumb.url}}" alt="">
+                    {{product.products_name}}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

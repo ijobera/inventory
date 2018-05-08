@@ -6,3 +6,8 @@ from .models import Item
 def home(request):
     items = Item.objects.all().order_by('created')
     return render(request, 'inventory/index.html', {'items':items})
+
+def product_detail(request,slug):
+    # return HttpResponse("Success")
+    product = Item.objects.get(slug=slug)
+    return render(request, 'inventory/details.html', {'product':product})
