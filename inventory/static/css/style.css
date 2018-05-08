@@ -1,47 +1,50 @@
-body{
-  background: #e0e0e0;
-  color: #212121;
-}
+body {
+  font-size: 12px;
+  color: #212121; }
 
-.search{
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
-
-.center_div{
-    margin: 0 auto;
-    width:70% /* value of your choice which suits your alignment */
-}
-
-.table{
-  margin: 0 auto;
-  width: 70%;
-}
-
-.table .fa-caret-right{
-  margin-right: 10px;
-}
-
-.table .fa-pencil,
-.table .fa-trash{
-  margin-right: 20px;
-}
-
-.table .fa-pencil{
-  color: #00897b;
-}
-
-.table .fa-trash{
-  color: #880e4f;
-}
-
-.table .title{
-  font-weight: 800;
-  font-size: 13px;
+nav {
   color: #000;
-  text-transform: uppercase;
-}
+  background: transparent;
+  box-shadow: none; }
 
-.table th, .table td{
-  padding: 20px 0;
-}
+.logo {
+  float: left; }
+
+.navigation {
+  float: right; }
+  .navigation a {
+    color: #212121;
+    font-weight: 600;
+    margin-right: 1rem; }
+    .navigation a:hover {
+      color: #009688;
+      transition: 0.2s; }
+    .navigation a:first-child {
+      padding-right: 1.2rem;
+      border-right: 1px solid #616161; }
+
+.search {
+  margin: 4rem 0;
+  font-size: 12px; }
+  .search .input-field {
+    width: 300px;
+    margin: 0 auto; }
+
+.result .edit {
+  color: #009688;
+  margin-right: 0.3rem;
+  font-size: 1rem; }
+.result .delete {
+  color: #f44336;
+  font-size: 1rem; }
+
+.pagination {
+  margin-top: 2rem; }
+  .pagination li a {
+    font-size: 10px; }
+
+footer {
+  margin-top: 5rem;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

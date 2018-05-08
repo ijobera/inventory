@@ -1,36 +1,80 @@
 {% extends 'inventory/base.html' %}
 
 {% block content %}
-  <div class="container">
+        <nav>
+            <div class="container">
+                <!-- <div class="logo">
+                    <h6>Inventory System</h6>
+                </div> -->
+                <div class="navigation">
+                    <a href="">Login</a>
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </nav>
+        
+            <div class="search">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l12">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">search</i>
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Search an item</label>
+                                </div>
+                        </div>
+                        <div class="col l7">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="result">
+                <div class="container">
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Brand</th>
+                                <th>Item Price</th>
+                                <th>Item Left</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            {% for item in items %}
+                            <tr>
+                            <td>{{item.products_name}}</td>
+                            <td>{{item.brand}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.item_left}}</td>
+                            <td><a href="#"><i class="material-icons prefix edit">create</i></a> <a href="#"><i class="material-icons prefix delete">delete</i></a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+        
+                        
+                        </table>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="waves-effect"><a href="#!">2</a></li>
+                            <li class="waves-effect"><a href="#!">3</a></li>
+                            <li class="waves-effect"><a href="#!">4</a></li>
+                            <li class="waves-effect"><a href="#!">5</a></li>
+                            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                        </ul>
+                </div>
+            </div>
+        
+            <footer>
+                <div class="container">
+                    <hr>
+                    <p>This Web Application is exclusively created to Stuff You Will Love</p>
+                </div>
+            </footer>
 
-    <div class="search">
-      <div class="center_div">
-        <form class="form-group">
-            <input type="email" class="form-control" placeholder="Search for item">
-            <button type="submit" class="btn btn-success">Search</button>
-        </form>
-      </div>
-      </div>
-
-      <table class="table">
-      <tr class="title">
-          <td>Product Name</td>
-          <td>Brand</td>
-          <td>Price</td>
-          <td>Item left</td>
-          <td>Actions</td>
-      </tr>
-      {% for item in items %}
-      <tr>
-          <td><i class="fa fa-caret-right" aria-hidden="true"></i> {{item.products_name}}</td>
-          <td>{{item.brand}}</td>
-          <td>{{item.price}}</td>
-          <td>{{item.item_left}}</td>
-          <td><a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a><a href=""><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-      </tr>
-      {% endfor %}
-
-      </table>
-
-  </div>
 {% endblock %}
